@@ -54,11 +54,11 @@ Because the code uses invocations and involves `NSMethodSignature`'s `numberOfAr
 ##Return Values
 If you need to ask a delegate for a `BOOL`, you can do this:
 
-    BOOL returnValue = [self ti_boolFromDelegateSelector:@selector(stuffFetcherShouldFetchStuff:)];
+    BOOL returnValue = [self ti_boolFromDelegateWithSelector:@selector(stuffFetcherShouldFetchStuff:)];
     
 If a method is optional, and you need the default behavior to be as if the method had returned `YES`, use the *optimistic* version:
 
-    BOOL returnValue = [self ti_optimisticBoolFromDelegateSelector:@selector(stuffFetcherShouldFetchStuff:)];
+    BOOL returnValue = [self ti_optimisticBoolFromDelegateWithSelector:@selector(stuffFetcherShouldFetchStuff:)];
     
 Similarly, if you need an object from a delegate:
 
